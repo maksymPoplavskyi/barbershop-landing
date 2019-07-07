@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Barber Shop</title>
+    <link href="../src/scss/libs/jquery.mb.YTPlayer.min.css" media="all" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -47,11 +48,11 @@
                 </ul>              
             </div>
         </header>
-        <div class="hero-container">
-            <h1 class="hero-container__title">
+        <div class="order-line">
+            <h1 class="order-line__title">
                 trust your hair and life to our specialists
             </h1>
-            <button class="button hero-container__button">
+            <button class="button order-line__button">
                 Book now
             </button>
         </div>
@@ -296,8 +297,39 @@
         </div>
     </section>
 
+    <!-- Movie -->
+    <section class="movie">
+        <div id="customElement" class="player" data-property="{
+            videoURL:'https://www.youtube.com/watch?v=KOaGeT6GDsg&list=PL6hMKuvF9iDAo_WEciKl3QgIcxdPKT7_q&index=1',
+            containment:'.movie',
+            showControls:false,
+            autoPlay:true,
+            loop: true,
+            mute:true,
+            startAt:0,
+            opacity:1,
+            addRaster:true,
+            quality:'hd720'
+        }">
+            <div class="movie-box">
+
+            </div>
+            <div class="order-line">
+                <h1 class="order-line__title">
+                    trust your hair and life to our specialists
+                </h1>
+                <button class="button order-line__button">
+                    Book now
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- People Says -->
+
     <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/script.min.js"></script>
     

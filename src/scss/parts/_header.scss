@@ -37,34 +37,6 @@
         }
     }
 
-    .hero-container {
-        position: absolute;
-        width: 100%;
-        top: 50%;
-        z-index: 99;
-        padding: 52px 0 40px 0;
-        text-align: center;
-        background: rgba($color: #fff, $alpha: .45);
-        transform: translateY(-50%);
-
-        &__title {
-            margin-bottom: 40px;
-        }
-
-        &__button {
-            font-family: $font-americanMedium;
-            background-color: $color-base;
-            color: $color-white;
-            transition: 0.9s ease;
-
-            &:hover {
-                transition: 0.9s ease;
-                background-color: $color-white;
-                color: $color-base;
-            }
-        }
-    }
-
     .hero-slider img {
         height: 100vh;
     }
