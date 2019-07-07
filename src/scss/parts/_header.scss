@@ -55,31 +55,12 @@
             font-family: $font-americanMedium;
             background-color: $color-base;
             color: $color-white;
-            
-            &:hover {
-                animation: swing 0.9s ease;
-                animation-iteration-count: 1;
+            transition: 0.9s ease;
 
-                @keyframes swing {
-                    15% {
-                      transform: translateX(13px);
-                    }
-                    30% {
-                      transform: translateX(-13px);
-                    }
-                    40% {
-                      transform: translateX(8px);
-                    }
-                    50% {
-                      transform: translateX(-8px);
-                    }
-                    65% {
-                      transform: translateX(4px);
-                    }
-                    100% {
-                      transform: translateX(0);
-                    }
-                }
+            &:hover {
+                transition: 0.9s ease;
+                background-color: $color-white;
+                color: $color-base;
             }
         }
     }

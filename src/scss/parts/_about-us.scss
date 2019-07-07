@@ -1,0 +1,60 @@
+// About Us
+
+.about-us {
+    padding-top: 214px;
+    text-align: center;
+    background: url('#{$path-img}aboutUs-bg.jpg') no-repeat center / cover;
+    background-attachment: fixed;
+
+    &__title {
+        margin-bottom: 70px;
+    }
+
+    &__container {
+        display: flex;
+        margin-bottom: 72px;
+
+        .container-01,
+        .container-02,
+        .container-03 {
+            width: 33%;
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+
+        .container-01 {
+
+            &__icon {
+                margin-bottom: 42px;
+            }
+
+            &__title {
+                margin-bottom: 40px;
+            }
+        }
+
+        .container-02 {
+            
+            &__icon {
+                margin-bottom: 42px;
+            }
+
+            &__title {
+                margin-bottom: 40px;
+            }
+        }
+
+        .container-03 {
+
+            &__icon {
+                margin-bottom: 42px;
+            }
+
+            &__title {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

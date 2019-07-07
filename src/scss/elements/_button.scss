@@ -8,21 +8,47 @@
     overflow: hidden;
     @include font-size-calc(24px, 24px);
 
-    &:before {
-        content: '';
-        position: absolute;
-        right: 13%;
-        bottom: 75px;
-        width: 25%;
-        border: 2px solid $color-base;
+    &:hover {
+        animation: swing 0.9s ease;
+        animation-iteration-count: 1;
+
+        @keyframes swing {
+            15% {
+              transform: translateX(13px);
+            }
+            30% {
+              transform: translateX(-13px);
+            }
+            40% {
+              transform: translateX(8px);
+            }
+            50% {
+              transform: translateX(-8px);
+            }
+            65% {
+              transform: translateX(4px);
+            }
+            100% {
+              transform: translateX(0);
+            }
+        }
     }
 
-    &:after {
-        content: '';
-        position: absolute;
-        left: 13%;
-        bottom: 75px;
-        width: 25%;
-        border: 2px solid $color-base;
-    }
+    // &:before {
+    //     content: '';
+    //     position: absolute;
+    //     right: 13%;
+    //     bottom: 75px;
+    //     width: 25%;
+    //     border: 2px solid $color-base;
+    // }
+
+    // &:after {
+    //     content: '';
+    //     position: absolute;
+    //     left: 13%;
+    //     bottom: 75px;
+    //     width: 25%;
+    //     border: 2px solid $color-base;
+    // }
 }
