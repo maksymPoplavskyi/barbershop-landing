@@ -2,7 +2,7 @@
 
 .our-services {
     padding-top: 80px;
-    background: url('../img/menu-bg.jpg') no-repeat center / cover;
+    background: url('#{$path-img}menu-bg.jpg') no-repeat center / cover;
     background-attachment: fixed;
 
     .price-content {
@@ -12,7 +12,7 @@
         margin-bottom: 80px;
 
         &__title {
-            color: #fff;
+            color: $color-white;
             margin-bottom: 50px;
         }
     }
@@ -22,7 +22,7 @@
     .beard,
     .additionally {
         display: flex;
-        color: #fff;
+        color: $color-white;
 
         &:not(:last-child) {
             margin-bottom: 40px;
@@ -47,8 +47,8 @@
         transition: 0.9s ease;
 
         &:hover {
-            background-color: #030303;
-            color: #fff;
+            background-color: $color-base;
+            color: $color-white;
             transition: 0.9s ease;
         }
     }

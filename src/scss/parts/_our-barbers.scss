@@ -1,0 +1,70 @@
+// Our Babers & Stylists
+
+.barbers {
+    padding-top: 70px;
+    background-color: #333;
+
+    .barbers-box {
+        text-align: center;
+    }
+
+    &__title {
+        margin-bottom: 64px;
+        font-weight: 400;
+        color: $color-white;
+
+    }
+
+    &__description {
+        margin-bottom: 70px;
+        font-weight: 400;
+        color: $color-white;
+        @include font-size-calc(24px, 24px);
+    }
+
+    .barbers-container {
+        display: flex;
+    }
+
+    &__img {
+        max-width: 350px;
+        margin-bottom: 10px;
+    }
+
+    .barbers-box-01,
+    .barbers-box-02,
+    .barbers-box-03 {
+        width: 33%;
+        margin-bottom: 60px;
+        text-align: center;
+
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        &__name {
+            font-family: $font-bernier;
+            font-weight: 400;
+            text-transform: uppercase;
+            color: $color-white;
+            @include font-size-calc(30px, 24px);
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+                height: 2px;
+                background-color: $color-white;
+            }
+        }
+
+        &__position {
+            display: block;
+            font-family: $font-apple;
+            font-weight: 400;
+            color: $color-white;
+            @include font-size-calc(24px, 24px);
+        }
+    }
+}
