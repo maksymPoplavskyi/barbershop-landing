@@ -1,0 +1,55 @@
+// Our Services
+
+.our-services {
+    padding-top: 80px;
+    background: url('../img/menu-bg.jpg') no-repeat center / cover;
+    background-attachment: fixed;
+
+    .price-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-bottom: 80px;
+
+        &__title {
+            color: #fff;
+            margin-bottom: 50px;
+        }
+    }
+
+    .haircut,
+    .shaving,
+    .beard,
+    .additionally {
+        display: flex;
+        color: #fff;
+
+        &:not(:last-child) {
+            margin-bottom: 40px;
+        }
+
+        &__icon {
+            margin-right: 10px;
+        }
+
+        &__title {
+            font-weight: 400;
+        }
+    }
+
+    .button-box {
+        text-align: center;
+    }
+
+    &__btn {
+        margin-bottom: 76px;
+        padding: 24px 64px;
+        transition: 0.9s ease;
+
+        &:hover {
+            background-color: #030303;
+            color: #fff;
+            transition: 0.9s ease;
+        }
+    }
+}

@@ -12,41 +12,17 @@
 
     &__container {
         display: flex;
-        margin-bottom: 72px;
+
 
         .container-01,
         .container-02,
         .container-03 {
             width: 33%;
-
+            margin-bottom: 72px;
+            
             &:not(:last-child) {
                 margin-right: 30px;
             }
-        }
-
-        .container-01 {
-
-            &__icon {
-                margin-bottom: 42px;
-            }
-
-            &__title {
-                margin-bottom: 40px;
-            }
-        }
-
-        .container-02 {
-            
-            &__icon {
-                margin-bottom: 42px;
-            }
-
-            &__title {
-                margin-bottom: 40px;
-            }
-        }
-
-        .container-03 {
 
             &__icon {
                 margin-bottom: 42px;

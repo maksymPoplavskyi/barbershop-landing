@@ -5,7 +5,7 @@
     font-family: $font-americanMedium;
     border: none;
     cursor: pointer;
-    overflow: hidden;
+    outline: none;
     @include font-size-calc(24px, 24px);
 
     &:hover {
