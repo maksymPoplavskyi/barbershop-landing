@@ -1,0 +1,28 @@
+// Dots
+
+.slick-dots {
+    list-style: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.slider-dot {
+    position: relative;
+    display: block;
+    width: 13px;
+    height: 13px;
+    margin: 20px 0;
+    border: 3px solid #000;
+    border-radius: 50%;
+    z-index: 100;
+
+    .slick-active & {
+        background-color: $color-white;
+    }
+}

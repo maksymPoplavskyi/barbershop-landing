@@ -1,0 +1,18 @@
+// Typography
+
+h1,
+h2 {
+    font-family: $font-bernier;
+    text-transform: uppercase;
+    @include font-size-calc(60px, 30px);
+}
+
+h4 {
+    font-family: $font-apple;
+    @include font-size-calc(24px, 30px);
+}
+
+p {
+    font-family: $font-americanMedium;
+    @include font-size-calc(16px, 24px);
+}

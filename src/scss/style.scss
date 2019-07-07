@@ -3,8 +3,16 @@
 @import 'variable';
 @import 'mixins';
 
+// Libs
+@import 'libs/slick';
+@import 'libs/slick-theme';
+
 // Common
+@import 'common/general';
+@import 'common/typography';
 
 // Elements
+@import 'elements/button';
 
 // Parts
+@import 'parts/header';

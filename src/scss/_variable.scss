@@ -1,1 +1,35 @@
 // Variables
+
+// Fonts
+$font-apple: 'Apple-Chancery';
+$font-bernier: 'BERNIERRegular-Regular';
+$font-americanMedium: 'AmericanTypewriter-Medium';
+$font-americanBold: 'AmericanTypewriter-Bold';
+
+// Colors
+$color-base: #030303;
+$color-white: #fff;
+$color-grey: #333;
+
+// Paths
+$path-img: '../img/';
+
+
+
+//Font-face
+
+@font-face { 
+    font-family: 'Apple-Chancery';  src: local('Apple-Chancery'), url('https://nomail.com.ua/files/woff/d449405699420710c0650624d5cb38ac.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: 'BERNIERRegular-Regular';  src: local('BERNIERRegular-Regular'), url('https://nomail.com.ua/files/woff/1c15624ee203beb2edcd422392cbec5d.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: 'AmericanTypewriter-Medium';  src: local('AmericanTypewriter-Medium'), url('https://nomail.com.ua/files/woff/e77f1948ca7bf8e8d8cb6faf19a4868b.woff') format('woff'); 
+}
+
+@font-face {
+    font-family: 'AmericanTypewriter-Bold';  src: local('AmericanTypewriter-Bold'), url('https://nomail.com.ua/files/woff/285bd9faa5c88157862bb498ac9b6506.woff') format('woff'); 
+}

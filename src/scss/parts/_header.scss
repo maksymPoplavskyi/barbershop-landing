@@ -1,0 +1,104 @@
+// Header
+
+.hero {
+    position: relative;
+    height: 100vh;
+
+    .header {
+        position: absolute;
+        transform: translateX(25%);
+        left: 0;
+        z-index: 99;
+        padding-top: 20px;
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+
+            &__list {
+                display: flex;
+                padding-top: 80px;
+                list-style: none;
+            }
+
+            &__item {
+            
+                &:not(:last-child) {
+                    margin-right: 62px;
+                }
+            }
+
+            &__link {
+                font-family: $font-americanMedium;
+                color: $color-white;
+                text-decoration: none;
+                @include font-size-calc(24px, 30px);
+            }
+        }
+    }
+
+    .hero-container {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        z-index: 99;
+        padding: 52px 0 40px 0;
+        text-align: center;
+        background: rgba($color: #fff, $alpha: .45);
+        transform: translateY(-50%);
+
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__button {
+            font-family: $font-americanMedium;
+            background-color: $color-base;
+            color: $color-white;
+            
+            &:hover {
+                animation: swing 0.9s ease;
+                animation-iteration-count: 1;
+
+                @keyframes swing {
+                    15% {
+                      transform: translateX(13px);
+                    }
+                    30% {
+                      transform: translateX(-13px);
+                    }
+                    40% {
+                      transform: translateX(8px);
+                    }
+                    50% {
+                      transform: translateX(-8px);
+                    }
+                    65% {
+                      transform: translateX(4px);
+                    }
+                    100% {
+                      transform: translateX(0);
+                    }
+                }
+            }
+        }
+    }
+
+    .hero-slider img {
+        height: 100vh;
+    }
+
+    .hero-social {
+        position: absolute;
+        right: calc(50% - 112px);
+        bottom: 50px;
+        font-size: 0px;
+
+        &__link {
+
+            &:not(:last-child) {
+                margin-right: 60px;
+            }
+        }
+    }
+}

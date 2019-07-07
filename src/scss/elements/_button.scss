@@ -1,0 +1,28 @@
+// Buttons
+
+.button {
+    padding: 25px 135px;
+    font-family: $font-americanMedium;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    @include font-size-calc(24px, 24px);
+
+    &:before {
+        content: '';
+        position: absolute;
+        right: 13%;
+        bottom: 75px;
+        width: 25%;
+        border: 2px solid $color-base;
+    }
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 13%;
+        bottom: 75px;
+        width: 25%;
+        border: 2px solid $color-base;
+    }
+}
