@@ -12,16 +12,27 @@
             return '<span class="slider-dot"></span>';
         },
     });
-})();
 
-var myPlayer;
-jQuery(function () {
+    var myPlayer;
+
+$(function() {
 
     var options = {
         mobileFallbackImage: "http://www.hdwallpapers.in/walls/pink_cosmos_flowers-wide.jpg",
         playOnlyIfVisible  : false
     };
 
-myPlayer = jQuery(".player").YTPlayer(options);
+myPlayer = $(".player").YTPlayer(options);
 
 });
+
+    $('.people-item__btn').on('click', fToggle);
+
+function fToggle() {
+    $('.people-item__commentary')
+        .not($(this).next() )
+        .slideUp(300);
+    $(this).next().slideToggle(300);
+}
+
+})();

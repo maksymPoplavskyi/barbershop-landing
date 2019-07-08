@@ -1,0 +1,45 @@
+// Reviews
+
+.reviews {
+    background: url('#{$path-img}reviews-bg.jpg') no-repeat center / cover;
+    padding-top: 70px;
+    text-align: center;
+
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &__description {
+        text-decoration: underline;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .people {
+        display: flex;
+        
+        
+        .people-item {
+            width: 20%;
+            margin-bottom: 240px;
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            &__btn {
+                border: none;
+                background-color: transparent;
+                outline: none;
+            }
+
+            &__title {
+                margin-bottom: 10px;
+            }
+
+            &__commentary {
+                display: none;
+            }
+        }
+    }
+}
