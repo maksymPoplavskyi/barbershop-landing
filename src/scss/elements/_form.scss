@@ -1,0 +1,62 @@
+// Form
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__field[type=number] {
+        margin-bottom: 50px;
+    }
+
+    &__field {
+        min-width: 38%;
+        padding: 20px 0 2px 0;
+        margin-bottom: 4px;
+        font-family: $font-americanMedium;
+        font-weight: 400;
+        background-color: transparent;
+        color: $color-white;
+        border: none;
+        border-bottom: 1px solid $color-white;
+        @include font-size-calc(24px, 24px);
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            font-family: $font-americanMedium;
+            font-weight: 400;
+            color: $color-white;
+            @include font-size-calc(24px, 24px);
+        }
+    }
+
+    &__btn {
+        margin-bottom: 130px;
+        font-family: $font-americanBold;
+        font-size: 30px;
+        padding: 20px 70px;
+        background-color: transparent;
+        color: $color-white;
+        transition: 0.9s ease;
+
+        &:hover {
+            background-color: rgba($color: $color-white, $alpha: .6);
+            color: $color-base;
+            transition: 0.9s ease;
+        }
+    }
+
+    & input:invalid {
+        box-shadow: 0 0 5px #d45252;
+        border: 1px solid $color-white;
+        transition: 2s;
+       }
+    
+    & input:required:valid {
+        transition: 2s;
+    }
+}
+

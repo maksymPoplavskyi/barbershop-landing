@@ -5,11 +5,18 @@
     height: 100vh;
 
     .header {
-        position: absolute;
-        transform: translateX(25%);
         left: 0;
         z-index: 99;
         padding-top: 20px;
+
+        // .header-logo {
+        //     display: block;
+        //     position: relative;
+        //     z-index: 123;
+        //     width: 255px;
+        //     height: 135px;
+        //     background-image: url(../../icons/Belgard-logo-1.svg);
+        // }
 
         .nav {
             display: flex;
@@ -33,6 +40,10 @@
                 color: $color-white;
                 text-decoration: none;
                 @include font-size-calc(24px, 30px);
+
+                &:hover {
+                    border-bottom: 2px solid $color-white;
+                }
             }
         }
     }
@@ -46,6 +57,17 @@
         right: calc(50% - 112px);
         bottom: 50px;
         font-size: 0px;
+
+        &__icon {
+            transition: 0.5s;
+
+            &:hover {
+                transition: 0.5s;
+                transform: scale(1.5);
+            }
+        }
+
+        
 
         &__link {
 

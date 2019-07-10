@@ -1,0 +1,60 @@
+// Footer
+
+.footer {
+    background: url('#{$path-img}footer-bg.jpg') no-repeat center / cover;
+    padding-top: 70px;
+    text-align: center;
+
+    .form-box {
+
+    }
+
+    &__title {
+        margin-bottom: 70px;
+        color: $color-white;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+    }
+
+    .contact-us {
+
+
+        &__title {
+            color: $color-white;
+            margin-bottom: 50px;
+        }
+
+        &__description {
+            margin-bottom: 40px;
+            font-family: $font-apple;
+            color: $color-white;
+            @include font-size-calc(24px, 24px);
+        }
+    }
+
+    .contacts {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 180px;
+
+        .contacts-mail,
+        .contacts-map,
+        .contacts-phone {
+            width: 24%;
+
+            &__icon {
+                margin-bottom: 30px;
+            }
+
+            &__description {
+                color: $color-white;
+            }
+        }
+    }
+
+    &__brand {
+        padding-bottom: 40px;
+        color: $color-white;
+        opacity: .5;
+    }
+}

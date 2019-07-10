@@ -18,10 +18,9 @@
     .people {
         display: flex;
         
-        
         .people-item {
             width: 20%;
-            margin-bottom: 240px;
+            margin-bottom: 190px;
 
             &:not(:last-child) {
                 margin-right: 10px;
@@ -31,6 +30,7 @@
                 border: none;
                 background-color: transparent;
                 outline: none;
+                cursor: pointer;
             }
 
             &__title {
