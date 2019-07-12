@@ -15,6 +15,11 @@
         animation-duration: 5s;
         animation-iteration-count: infinite;
 
+        @media (max-width: $phone-bp) {
+            font-size: 42px;
+            margin-bottom: 30px;
+        }
+
     }
 
     &__description {
@@ -22,10 +27,20 @@
         font-weight: 400;
         color: $color-white;
         @include font-size-calc(24px, 24px);
+
+        @media (max-width: $phone-bp) {
+            font-size: 20px;
+            margin-bottom: 40px;
+        }
     }
 
     .barbers-container {
         display: flex;
+
+        @media (max-width: $phone-bp) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     .barbers-flip {
@@ -35,6 +50,10 @@
         position: relative;
         transition: 1s;
         transform-style: preserve-3d;
+
+        @media (max-width: $phone-bp) {
+            left: 12px;
+        }
 
         &:hover {
             transform: rotateY(180deg);
@@ -71,9 +90,17 @@
         width: 33%;
         margin-bottom: 60px;
         text-align: center;
+        
+        @media (max-width: $phone-bp) {
+            width: 100%;
+        }
 
         &:not(:last-child) {
             margin-right: 30px;
+
+            @media (max-width: $phone-bp) {
+                margin-right: 0;
+            }
         }
 
         &__name {

@@ -12,6 +12,14 @@
 
     &__title {
         margin-bottom: 40px;
+
+        @media (max-width: $phone-bp) {
+            max-width: 300px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            line-height: 30px;
+            font-size: 32px;
+        }
     }
 
     &__button {

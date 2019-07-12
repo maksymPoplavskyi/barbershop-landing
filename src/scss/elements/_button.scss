@@ -8,6 +8,10 @@
     outline: none;
     @include font-size-calc(24px, 24px);
 
+    @media (max-width: $phone-bp) {
+      padding: 25px 70px;
+  }
+
     &:hover {
         animation: swing 0.9s ease;
         animation-iteration-count: 1;

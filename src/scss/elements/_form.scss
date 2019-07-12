@@ -42,6 +42,10 @@
         color: $color-white;
         transition: 0.9s ease;
 
+        @media (max-width: $phone-bp) {
+            margin-bottom: 90px;       
+        }
+
         &:hover {
             background-color: rgba($color: $color-white, $alpha: .6);
             color: $color-base;

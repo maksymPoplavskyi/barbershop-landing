@@ -11,6 +11,10 @@
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
+
+    @media (max-width: $phone-bp) {
+        display: none;
+    }
 }
 
 .slider-dot {
@@ -22,6 +26,10 @@
     border: 3px solid #000;
     border-radius: 50%;
     z-index: 100;
+
+    @media (max-width: $phone-bp) {
+        display: none;
+    }
 
     .slick-active & {
         background-color: $color-white;

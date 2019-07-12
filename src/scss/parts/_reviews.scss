@@ -4,6 +4,11 @@
     background: url('#{$path-img}reviews-bg.jpg') no-repeat center / cover;
     padding-top: 70px;
     text-align: center;
+    
+    @media (max-width: $phone-bp) {
+        padding-top: 70px;
+        background: url('#{$path-img}reviews-bg.jpg') no-repeat center / cover;
+    }
 
     &__title {
         margin-bottom: 20px;
@@ -17,10 +22,20 @@
 
     .people {
         display: flex;
+
+        @media (max-width: $phone-bp) {
+             flex-direction: column;
+             flex-wrap: wrap;
+        }
         
         .people-item {
             width: 20%;
             margin-bottom: 190px;
+
+            @media (max-width: $phone-bp) {
+                min-width: 100%;
+                margin-bottom: 15px;
+            }
 
             &:not(:last-child) {
                 margin-right: 10px;
@@ -39,6 +54,10 @@
 
             &__commentary {
                 display: none;
+
+                @media (max-width: $phone-bp) {
+                    padding: 0 20px;
+                }
             }
         }
     }

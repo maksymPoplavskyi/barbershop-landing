@@ -58,6 +58,7 @@ $(function() {
 
         scrollOffSet = $(this).scrollTop();
         checkScroll(scrollOffSet);
+        checkScrollBp(scrollOffSet);
     });
 
     function checkScroll(scrollOffSet) {
@@ -67,6 +68,15 @@ $(function() {
         } else {
             header.removeClass('fixed');
             header.addClass('absolute');
+        }
+    }
+
+    function checkScrollBp(scrollOffSet) {
+        if (window.innerWidth <= 768 && scrollOffSet >= aboutUsH) {
+            $('.nav__burger').css('display', 'flex');
+        } else {
+            $('.nav__burger').css('display', 'none');
+            $('.nav__list').css('display', 'none');
         }
     }
 
@@ -117,16 +127,52 @@ $(function() {
             $('#about-js').removeClass('active');
         }
         
+
+        // burgers
+        $('.nav__burger').on('click', function(e){
+            e.preventDefault();
+            // $('.nav__list').css({'display': 'flex'});
+            $('.nav__list').toggleClass('active-burger');
         });
 
-        var wow = new WOW ({
-              boxClass:     'wow',
-              animateClass: 'animated',
-              offset:       0,
-              mobile:       true,
-              live:         true,
-              scrollContainer: null,
-              resetAnimation: true,
-        });
-        wow.init();
+        $('.nav__item').on('click', function() {
+            $('.nav__list').removeClass('active-burger');
+        })
+    });
+
+    // animation
+    var wow = new WOW ({
+            boxClass:     'wow',
+            animateClass: 'animated',
+            offset:       0,
+            mobile:       true,
+            live:         true,
+            scrollContainer: null,
+            resetAnimation: true,
+    });
+
+    wow.init();
 });
+
+// pop-up
+var popup = document.getElementById('popup'),
+    popupToggle = document.querySelectorAll('.popup-btn'),
+    popupForm = document.getElementById('popup-form'),
+    popupClose = document.querySelector('.popup__close');
+
+    for (var i = 0, element; element = popupToggle[i]; i++)  {
+        popupToggle[i].onclick = function() {
+            popup.style.display = "block";
+        };
+    };
+
+    popupClose.onclick = function() {
+        popup.style.display = "none";
+    }
+    
+
+    window.onclick = function(e) {
+        if(e.target == popupForm) {
+            popup.style.display = "none";
+        }
+    }

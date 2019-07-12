@@ -5,6 +5,10 @@
 
     .order-line {
         top: 100%;
+
+        @media (max-width: $phone-bp) {
+            top: 86%;   
+        }
     }
 
     .movie-box {

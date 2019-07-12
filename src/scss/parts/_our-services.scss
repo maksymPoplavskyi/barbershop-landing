@@ -11,11 +11,19 @@
         align-items: flex-end;
         margin-bottom: 80px;
 
+        @media (max-width: $phone-bp) {
+            align-items: center;                
+        }
+
         &__title {
             color: $color-white;
             margin-bottom: 50px;
             animation-duration: 5s;
             animation-iteration-count: infinite;
+
+            @media (max-width: $phone-bp) {
+                font-size: 35px;       
+            }
         }
     }
 
@@ -26,16 +34,35 @@
         display: flex;
         color: $color-white;
 
+        @media (max-width: $phone-bp) {
+            text-align: center;
+        }
+
         &:not(:last-child) {
             margin-bottom: 40px;
         }
 
         &__icon {
             margin-right: 10px;
+
+            @media (max-width: $phone-bp) {
+                display: none;
+            }
         }
 
         &__title {
             font-weight: 400;
+
+            @media (max-width: $phone-bp) {
+                max-width: 375px;
+            }
+        }
+
+        &__description p {
+
+            @media (max-width: $phone-bp) {
+                max-width: 375px;
+            }
         }
     }
 
@@ -47,6 +74,10 @@
         margin-bottom: 76px;
         padding: 24px 64px;
         transition: 0.9s ease;
+
+        @media (max-width: $phone-bp) {
+            padding: 24px 24px;
+        }
 
         &:hover {
             background-color: $color-base;

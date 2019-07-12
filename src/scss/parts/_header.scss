@@ -9,29 +9,75 @@
         z-index: 99;
         padding-top: 20px;
 
-        // .header-logo {
-        //     display: block;
-        //     position: relative;
-        //     z-index: 123;
-        //     width: 255px;
-        //     height: 135px;
-        //     background-image: url(../../icons/Belgard-logo-1.svg);
-        // }
-
         .nav {
+            position: relative;
             display: flex;
             justify-content: space-between;
+
+            &__burger {
+                display: none;
+                border: none;
+                background-color: transparent;
+                cursor: pointer;
+                outline: none;
+
+                @media (max-width: $phone-bp) {
+                    position: absolute;
+                    top: 38px;
+                    right: -44px;
+                    font-size: 35px;
+                    color: $color-white;
+                }
+
+            }
+
+            &__logo {
+
+                @media (max-width: $phone-bp) {
+                    width: 250px;
+                    height: 90px;
+                }
+            }
 
             &__list {
                 display: flex;
                 padding-top: 80px;
                 list-style: none;
+
+                @media (max-width: $phone-bp) {
+                    display: none;
+                    position: fixed;
+                    padding-top: 130px;
+                    top: 0px;
+                    right: 0;
+                    width: 100%;
+                    min-width: 375px;
+                    background-color: rgba($color: $color-base, $alpha: .5);
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    z-index: -1;
+
+                }
             }
 
             &__item {
+
+                &:last-child {
+
+                    @media (max-width: $phone-bp) {
+                        margin-bottom: 30px;
+                    }
+                }
             
                 &:not(:last-child) {
                     margin-right: 62px;
+
+                    @media (max-width: $phone-bp) {
+                        margin-right: 0;
+                        margin-bottom: 10px;
+                    }
+                    
                 }
             }
 
@@ -60,6 +106,10 @@
 
         &__icon {
             transition: 0.5s;
+
+            @media (max-width: $phone-bp) {
+                margin-bottom: -20px;       
+            }
 
             &:hover {
                 transition: 0.5s;
