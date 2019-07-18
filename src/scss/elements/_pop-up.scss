@@ -24,11 +24,10 @@
     color: $color-white;
     background: transparent;
 
-    @media (max-width: $phone-bp) {
-        right: 3%;
-        top: 8%;            
-    }
-
+        @media (max-width: $phone-bp) {
+            right: 3%;
+            top: 8%;            
+        }
     }
 
     &__form {

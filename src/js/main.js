@@ -49,8 +49,9 @@ $(function() {
 
     // fixed header scroll
     var header = $('#header'),
-    aboutUsH = $('#about-us').innerHeight(),
-    scrollOffSet = $(window).scrollTop();
+        aboutUsH = $('#about-us').innerHeight(),
+        scrollOffSet = $(window).scrollTop();
+
 
     checkScroll(scrollOffSet);
 
@@ -62,7 +63,10 @@ $(function() {
     });
 
     function checkScroll(scrollOffSet) {
-        if (scrollOffSet >= aboutUsH) {
+        if (scrollOffSet >= aboutUsH - 100 && window.innerWidth > 1000) {
+            header.removeClass('absolute');
+            header.addClass('fixed');
+        } else if(scrollOffSet >= 666 && window.innerWidth <= 768) {
             header.removeClass('absolute');
             header.addClass('fixed');
         } else {
@@ -72,11 +76,12 @@ $(function() {
     }
 
     function checkScrollBp(scrollOffSet) {
-        if (window.innerWidth <= 768 && scrollOffSet >= aboutUsH) {
+
+        if (window.innerWidth <= 768 && scrollOffSet >= 666) {
+            $('.nav__list').css('display', 'none');
             $('.nav__burger').css('display', 'flex');
         } else {
             $('.nav__burger').css('display', 'none');
-            $('.nav__list').css('display', 'none');
         }
     }
 
@@ -99,45 +104,68 @@ $(function() {
     $(window).scroll(function() {
         var height = $(window).scrollTop();
         
-        if(height > 700 && height <1510){
+        if(window.innerWidth > 1000 && height >= 687 && height < 1410){
 
             $('#nav a').removeClass('active');
             $('#about-js').addClass('active');
 
-        } else if(height > 1510 && height < 2308) {
+        } else if(window.innerWidth < 768 && height >= 500 && height < 1800) {
 
             $('#nav a').removeClass('active');
-            $('#service-js').addClass('active');   
+            $('#about-js').addClass('active');
 
-        } else if(height > 2308 && height < 2968){
+        } else if(window.innerWidth > 1000 && height >= 1440 && height < 2300) {
+
+            $('#nav a').removeClass('active');
+            $('#service-js').addClass('active');
+
+        } else if(window.innerWidth < 768 && height >1410 && height < 2650) {
+
+            $('#nav a').removeClass('active');
+            $('#service-js').addClass('active');
+
+        } else if(window.innerWidth > 1000 && height >= 2300 && height < 2968) {
+        
+            $('#nav a').removeClass('active');
+            $('#barber-js').addClass('active');
+        
+        } else if(window.innerWidth < 768 && height > 2650 && height < 4000) {
 
             $('#nav a').removeClass('active');
             $('#barber-js').addClass('active');
 
-        } else if(height > 2968 && height < 4345){
+        } else if(window.innerWidth > 1000 && height >= 2968 && height < 4245){
 
             $('#nav a').removeClass('active');
             $('#movie-js').addClass('active');
 
-        } else if(height > 4345) {
+        } else if(window.innerWidth < 768 && height > 4245 && height < 6250) {
+
+            $('#nav a').removeClass('active');
+            $('#movie-js').addClass('active');
+
+        } else if(window.innerWidth > 1000 && height >= 4245) {
 
             $('#nav a').removeClass('active');
             $('#contact-js').addClass('active');
+
+        } else if(window.innerWidth < 768 && height >= 6250) {
+
+            $('#nav a').removeClass('active');
+            $('#contact-js').addClass('active');
+
         } else {
             $('#about-js').removeClass('active');
         }
+    });
+
+    // burgers
+    $('.nav__burger').on('click', function(e){
+        e.preventDefault();
         
-
-        // burgers
-        $('.nav__burger').on('click', function(e){
-            e.preventDefault();
-            // $('.nav__list').css({'display': 'flex'});
-            $('.nav__list').toggleClass('active-burger');
-        });
-
-        $('.nav__item').on('click', function() {
-            $('.nav__list').removeClass('active-burger');
-        })
+        $('.nav__list')
+            .slideToggle(300)
+            .css('display', 'flex');
     });
 
     // animation
@@ -152,6 +180,39 @@ $(function() {
     });
 
     wow.init();
+
+    // 768 px animation
+    var amineServiceBoxs = $('.services-box-anime-js');
+
+    function mobileChangeAnime () {
+        if (window.innerWidth <= 768) {
+            $('.anime-about-container1-js')
+                .removeClass('bounceInLeft')
+                .removeClass('delay-1s')
+                .addClass('bounceInUp');
+
+            $('#about-us-container2-anime-js')
+                .removeClass("bounceInUp")
+                .addClass('pulse');
+
+            $('.anime-reviews-img-js')
+                .removeClass('bounceInRight')
+                .addClass('bounceInLeft');
+
+            $('.anime-contacts-js')
+                .removeClass('slideInRight')
+                .addClass('slideInLeft');
+
+            for ( i = 0; i < amineServiceBoxs.length; i++) {
+                amineServiceBoxs
+                .removeClass("lightSpeedIn")
+                .addClass("fadeInUp");
+                
+            }
+        }
+    }
+
+    mobileChangeAnime();
 });
 
 // pop-up

@@ -1,13 +1,13 @@
 // Reviews
 
 .reviews {
-    background: url('#{$path-img}reviews-bg.jpg') no-repeat center / cover;
+    background: url('#{$path-img}aboutUs-bg.jpg') no-repeat center / cover;
     padding-top: 70px;
     text-align: center;
     
     @media (max-width: $phone-bp) {
         padding-top: 70px;
-        background: url('#{$path-img}reviews-bg.jpg') no-repeat center / cover;
+        background: url('#{$path-img}aboutUs-bg.jpg') no-repeat center / cover;
     }
 
     &__title {
